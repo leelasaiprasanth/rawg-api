@@ -12,10 +12,10 @@ export interface Platform {
 
 const usePlatfroms = () =>
   useQuery<FetchResponse<Platform>, Error>({
-    queryKey: ["platfroms"],
+    queryKey: ["platforms"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000, //24hours
-    initialData: { count: platforms.length, results: platforms, next: null },
+    initialData: platforms,
   });
 
 export default usePlatfroms;
