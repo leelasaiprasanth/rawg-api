@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import ms from "ms";
 import platforms from "../data/platforms";
+import Platform from "../entities/Platform";
 import APIClinet, { FetchResponse } from "../services/api-client";
-import { Platform } from "../entities/Platform";
 
 const apiClient = new APIClinet<Platform>("/platforms/list/parents");
 
